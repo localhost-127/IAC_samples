@@ -41,4 +41,12 @@ resource "docker_container" "todo_app" {
   depends_on = [
     docker_image.todo_app_image,
   ]
+  volumes {
+	container_path = "/etc/todos"
+	volume_name = "todo-db"
+  }
+}
+
+resource "docker_volume" "todo-db" {
+  name = "todo-db"
 }
