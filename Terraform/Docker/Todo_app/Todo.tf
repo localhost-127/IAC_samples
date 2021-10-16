@@ -24,7 +24,7 @@ resource "docker_image" "todo_app_image" {
       foo : "zoo"
     }
     label = {
-      author : "Rosh"
+      author : "localhoster"
     }
 	no_cache = true
   }
